@@ -13,6 +13,7 @@ import { ClientsComponent } from './clients/clients.component';
 import { ClientModalComponent } from './clients/modals/client-modal/client-modal.component';
 import { KpiModalComponent } from './clients/modals/kpi-modal/kpi-modal.component';
 
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,6 +26,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     ReactiveFormsModule,
 
+    MatNativeDateModule,
+    MatDatepickerModule,
     MatToolbarModule,
     MatSidenavModule,
     MatTableModule,

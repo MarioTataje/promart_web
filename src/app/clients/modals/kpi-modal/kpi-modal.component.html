@@ -1,1 +1,20 @@
-<p>kpi-modal works!</p>
+<div class="flex justify-between bg-[#DEA869] px-8 py-4">
+  <div class="text-xl font-semibold">
+    <span>KPI de clientes</span>
+  </div>
+  <div (click)="onClose(null)" class="cursor-pointer">
+    <mat-icon>close</mat-icon>
+  </div>
+</div>
+<div class="p-8">
+  <form [formGroup]="kpiForm">
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Promedio Edad</mat-label>
+      <input matInput formControlName="promedio_edad" placeholder="Promedio Edad" readonly />
+    </mat-form-field>
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Desviacion Estandar</mat-label>
+      <input matInput formControlName="desviacion_estandar" placeholder="Desviacion Estandar" readonly />
+    </mat-form-field>
+  </form>
+</div>

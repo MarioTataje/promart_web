@@ -3,8 +3,11 @@
     <div>
       Clientes
     </div>
-    <div>
-      <button class="bg-[#76A19E]" (click)="addClient()" mat-flat-button>
+    <div class="flex justify-between">
+      <button class="bg-[#76A19E] px-4 py-2 rounded mr-4" (click)="kpiClients()" mat-flat-button>
+        Mostrar KPI de clientes
+      </button>
+      <button class="bg-[#76A19E] px-4 py-2 rounded" (click)="addClient()" mat-flat-button>
         Agregar cliente
       </button>
     </div>
