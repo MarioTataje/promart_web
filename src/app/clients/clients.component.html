@@ -1,0 +1,47 @@
+<div class="mx-auto min-w-80 max-w-4xl">
+  <div class='m-4 md:m-0 md:my-4 text-lg font-bold flex justify-between'>
+    <div>
+      Clientes
+    </div>
+    <div>
+      <button class="bg-[#76A19E]" (click)="addClient()" mat-flat-button>
+        Agregar cliente
+      </button>
+    </div>
+  </div>
+  <div class="overflow-x-auto">
+    <table mat-table [dataSource]="clients" class="w-full bg-[#f2dec9] mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="text-lg font-semibold">ID</th>
+        <td mat-cell *matCellDef="let client">{{ client.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef class="text-lg font-semibold">Nombre</th>
+        <td mat-cell *matCellDef="let client">{{ client.nombre }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="apellido">
+        <th mat-header-cell *matHeaderCellDef class="text-lg font-semibold">Apellido</th>
+        <td mat-cell *matCellDef="let client">{{ client.apellido }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="edad">
+        <th mat-header-cell *matHeaderCellDef class="text-lg font-semibold">Edad</th>
+        <td mat-cell *matCellDef="let client">{{ client.edad }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha_nacimiento">
+        <th mat-header-cell *matHeaderCellDef class="text-lg font-semibold">Fecha nacimiento</th>
+        <td mat-cell *matCellDef="let client">{{ client.fecha_nacimiento }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha_probable_muerte">
+        <th mat-header-cell *matHeaderCellDef class="text-lg font-semibold">Fecha probable de deceso</th>
+        <td mat-cell *matCellDef="let client">{{ client.fecha_probable_muerte }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

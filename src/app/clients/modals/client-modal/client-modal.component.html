@@ -1,0 +1,39 @@
+<div class="flex justify-between bg-[#DEA869] px-8 py-4">
+  <div class="text-xl font-semibold">
+    <span>Añadir cliente</span>
+  </div>
+  <div (click)="onClose(null)" class="cursor-pointer">
+    <mat-icon>close</mat-icon>
+  </div>
+</div>
+<div class="p-8">
+  <form [formGroup]="clientForm">
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" placeholder="Nombre" />
+    </mat-form-field>
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput formControlName="apellido" placeholder="Apellido" />
+    </mat-form-field>
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Edad</mat-label>
+      <input matInput formControlName="edad" placeholder="Edad" />
+    </mat-form-field>
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Fecha nacimiento</mat-label>
+      <input matInput formControlName="fecha_nacimiento" placeholder="Fecha nacimiento" />
+    </mat-form-field>
+  </form>
+</div>
+<div class="pt-2 pb-4 bg-[#FFF4E8]">
+  <div class="flex justify-end pr-4">
+    <button (click)="onClose(null)" mat-flat-button class="mr-2 bg-[#FFF4E8]">
+      Cancelar
+    </button>
+    <button [disabled]="clientForm.invalid" (click)="onClose(clientForm.value)" mat-flat-button
+      class="bg-[#76A19E] text-white">
+      Guardar
+    </button>
+  </div>
+</div>
